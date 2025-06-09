@@ -1,27 +1,14 @@
-const fullName = "Mark Honchar";
-const age = 15;
-const profession = "Disigner";
-const filmName = "BEE Movie";
-const yearOut = 2019;
-const awarrdsFilmOscar = false;
-let isOscarWin;
-isOscarWin = true;
-let tempretreOutsideTommorow;
-tempretreOutsideTommorow = "28celsi";
-const pagesBook = 157;
-const isCar = false;
-let averageScore;
-const isDriverPass = true;
-let welcomeWord;
-const isAdult = false;
-let isPass;
-const sportName = "Football";
-const isSportOlimpick = true;
-const serialName = "Loki";
-const amountSeason = 2;
-let isFinishedSerial = undefined;
-console.log(serialName, amountSeason, isFinishedSerial);
+const userName = prompt("Ведіть ваше і\'мя");
+alert('Hi!, ' + userName + '!');
 
-const countryName = 'U"S"A';
-const daysVacation = 14;
-const isFly = true;
+const currentYear = new Date().getFullYear();
+console.log(currentYear);
+
+const userYearBD = prompt("Введіть ваш вік");
+const userAge = currentYear - userYearBD; 
+alert(userName + ',' +'Your year is, ' + userAge + '!');
+
+
+const throw10Year = currentYear + 10;
+const userAgeThrow10Year = throw10Year - userYearBD;
+alert(userName + ',' + 'a через 10 років вам буде' + userAgeThrow10Year + '!')
