@@ -1,58 +1,27 @@
- console.log('hi, console!');
-
-///
-let wakeUptime = '10:45';
-console.log(wakeUptime);
-
-const amountDaysInWeek = 7;
-const days_in_week = 7;
-const allDayWeek = 7;
-console.log(allDayWeek);
-
-
-//
-
-const isWork = false;
-
-//
+const fullName = "Mark Honchar";
+const age = 15;
+const profession = "Disigner";
+const filmName = "BEE Movie";
+const yearOut = 2019;
+const awarrdsFilmOscar = false;
+let isOscarWin;
+isOscarWin = true;
+let tempretreOutsideTommorow;
+tempretreOutsideTommorow = "28celsi";
+const pagesBook = 157;
 const isCar = false;
+let averageScore;
+const isDriverPass = true;
+let welcomeWord;
+const isAdult = false;
+let isPass;
+const sportName = "Football";
+const isSportOlimpick = true;
+const serialName = "Loki";
+const amountSeason = 2;
+let isFinishedSerial = undefined;
+console.log(serialName, amountSeason, isFinishedSerial);
 
-//
-const myHeight = 1.78;
-console.log(myHeight);
-
-
-
-
-let titleMovie = 'Gohstrider';
-console.log(titleMovie);
-titleMovie = 'Gohstrider2'
-
- // create zminnu for your pets
- let myPet = 'cat-Sima';
- console.log(myPet);
-
-
- let firstName = 'Mark';
- console.log(firstName);
- let isAdult = true;
- let isWeekend = false;
-
- //створіть змінну яка буде містити булевве значення про те чи є ви студентом
- let isStudent = false;
-
- let yearOFbirth = 2000;
- yearOFbirth = 2009;
- console.log(yearOFbirth);
-
- //create zminnu for safe yoru favorite color
- 
-let colorFavorite = 'blue';
-console.log(firstName, colorFavorite);
-
-let age = null;
-console.log(age);
-age = 15; 
-console.log(age);
-
-
+const countryName = 'U"S"A';
+const daysVacation = 14;
+const isFly = true;
