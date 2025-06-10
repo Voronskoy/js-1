@@ -1,30 +1,29 @@
-const number1 = prompt('enter first number', 5);
-const number2 = prompt('enter second number', 3);
-console.log(' number1 = ', number1, typeof number1);
-console.log(' number2 = ', number2, typeof number2);
+// const travelKm = prompt('how kilometrs travel?');// 300
+// const gasLeft100Km = prompt("how gas left 100 km?")// 6
+// if (confirm("Do you want made calc?")) {
+//     const calcGasTotal = (travelKm / 100) * gasLeft100Km;
+//     alert('all gas ' +calcGasTotal);
+// } else {
+//     alert(":(");
+// }
 
-const summa1 = number1 + number2;
-alert('summma1 = ' + summa1);
+// const pagesBook = prompt("how pages have your book?");
+// const pagesInDay = prompt("how pages you read everyday?");
+// if (confirm("Do you want made calc?")) {
+//   const daysReadBook = pagesBook / pagesInDay;
+//   alert("Days for this book: " + daysReadBook);
+// } else {
+//   alert(":(");
+// }
 
-const summa2 = +number1 + +number2;
-alert('summma2 = ' + summa2);
-
-const summa3 = Number(number1) + Number(number2);
-alert('summma3 = ' + summa3);
-
-const substruct = Number(number1) - Number(number2);
-alert(substruct);
-
-const productName1 = prompt('Enter name first product');
-const productPrice1 = prompt('Enter price ' + productName1);
-const productName2 = prompt('Enter name second product');
-const productPrice2 = prompt('Enter price ' + productName2);
-
-const totalPrice = Number(productPrice1) + Number(productPrice2);
-
-const productInfo1 = productName1 + ' - ' + productPrice1 + ' грн\n';
-const productInfo2 = productName2 + ' - ' + productPrice2 + ' грн\n';
-const totalInfo = '------\nдо спалати - ' + totalPrice + ' грн\n';
-
-alert('Ви купили:\n' + productInfo1 + productInfo2 + totalInfo);
-
+const SUGER_GRAMMS_IN_TEA_SPOON = 5;
+const DAYS_IN_WEEK = 7;
+const sugarTeaSpoonInCup = prompt("how tea spoon sugar have your cap?");
+const capInDay = prompt("how cap you drink in day?");
+if (confirm("Do you want made calc?")) {
+  const sugarGrammsInWeek =
+    sugarTeaSpoonInCup * capInDay * SUGER_GRAMMS_IN_TEA_SPOON * DAYS_IN_WEEK;
+  alert("Sugar In Week: " + sugarGrammsInWeek);
+} else {
+  alert(":(");
+}
