@@ -1,29 +1,20 @@
-// const travelKm = prompt('how kilometrs travel?');// 300
-// const gasLeft100Km = prompt("how gas left 100 km?")// 6
-// if (confirm("Do you want made calc?")) {
-//     const calcGasTotal = (travelKm / 100) * gasLeft100Km;
-//     alert('all gas ' +calcGasTotal);
+// const accessAge = 12;
+// const userAge = prompt('Скільки вам років?');
+
+// if (Number(userAge) >= accessAge) {
+//   alert('Ви можете купляти квиток');
 // } else {
-//     alert(":(");
+//   const yearWait = accessAge - Number(userAge);
+//   alert('Треба ще почекати років: ' + yearWait);
 // }
 
-// const pagesBook = prompt("how pages have your book?");
-// const pagesInDay = prompt("how pages you read everyday?");
-// if (confirm("Do you want made calc?")) {
-//   const daysReadBook = pagesBook / pagesInDay;
-//   alert("Days for this book: " + daysReadBook);
-// } else {
-//   alert(":(");
-// }
+const num1 = prompt('Enter first number'); // string
+const num2 = prompt('Enter second number'); // string
 
-const SUGER_GRAMMS_IN_TEA_SPOON = 5;
-const DAYS_IN_WEEK = 7;
-const sugarTeaSpoonInCup = prompt("how tea spoon sugar have your cap?");
-const capInDay = prompt("how cap you drink in day?");
-if (confirm("Do you want made calc?")) {
-  const sugarGrammsInWeek =
-    sugarTeaSpoonInCup * capInDay * SUGER_GRAMMS_IN_TEA_SPOON * DAYS_IN_WEEK;
-  alert("Sugar In Week: " + sugarGrammsInWeek);
+if (num1 > num2) { // 3 > 3 false
+  alert(num1 + ' - bigest');
+} else if (num2 > num1) { // 3 > 3 false
+  alert(num2 + ' - bigest');
 } else {
-  alert(":(");
+  alert('Equal');
 }
