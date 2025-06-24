@@ -1,61 +1,70 @@
-// const yearCheck = 2000;
-// const birthYear = prompt("Ваш рік народження?");
-// // if (Number(birthYear) < yearCheck) {
-// //   alert("Ви народилися в минулому тисячолітті");
+// // const dayWeek = prompt("Number of day week:");
+// // if (Number(dayWeek) === 6) {
+// //   alert("wow!");
+// // } else if (Number(dayWeek) === 7) {
+// //   alert("wow!");
 // // } else {
-// //   alert("Ви з 3-ого тисячолітті");
+// //   alert(":(");
 // // }
-// if (Number(birthYear) >= yearCheck) {
-//   alert("Ви з 3-ого тисячолітті");
+
+// const secretNumber = 42;
+// const userInput = prompt("Enter number:");
+// if (Number(userInput) === secretNumber) {
+//   alert("WOW!!!");
+// } else if (Number(userInput) < secretNumber) {
+//   alert(" Your number less(");
 // } else {
-//   alert("Ви народилися в минулому тисячолітті");
+//   alert("Your number hight");
 // }
 
-// const userInput = prompt("Введіть Так/Ні");
-// // if (userInput === "Так") {
-// //   alert(";)");
-// // } else {
-// //   if (userInput === "Ні") {
-// //     alert(":(");
-// //   } else {
-// //     alert("???");
-// //   }
-// // }
-// if (userInput === "Так") {
-//   alert(";)");
-// } else if (userInput === "Ні") {
+// const nameUser1 = prompt("Enter your name:");
+// const nameUser2 = prompt("Enter your name:");
+// if (nameUser1 === nameUser2) {
+//   alert("Hi namesake");
+// } else {
+//   alert("hi");
+// }
+
+// const userSize = prompt("Enter your size:", 36);
+// const size = Number(userSize);
+// if (size === 36) {
+//   alert("Your size S");
+// } else if (size === 38) {
+//   alert("Your size M");
+// } else if (size === 40) {
+//   alert("Your size L");
+// } else {
 //   alert(":(");
-// } else {
-//   alert("???");
 // }
 
-// const speedUser = prompt('Ваша швидкість?');
-// if (Number(speedUser) > 120) {
-//   alert('Штраф!');
-// } else if(Number(speedUser) >= 60){
-//   alert('Normal');
-// }
-// else{
-// alert('можна швидше!');
+// let userAge1 = prompt("Your age?");
+// let userAge2 = prompt("Your age?");
+// userAge1 = Number(userAge1);
+// userAge2 = Number(userAge2);
+// if (userAge1 === userAge2) {
+//   alert("We peers");
+// } else if (userAge1 < userAge2) {
+//   alert("oldest second user");
+// } else {
+//   alert("oldest first user");
 // }
 
-const chargeLevel = prompt("Ваш заряд на телефоні?");
-const chargeNumber = Number(chargeLevel);
-// if (Number(chargeLevel) > 80) {
-//   alert("full");
-// } else if (Number(chargeLevel) >= 30) {
-//   alert("normal");
-// } else {
-//   alert("urgent charges");
-// }
-if (chargeNumber > 100) {
-  alert("it i imposible");
-} else if (chargeNumber > 80) {
+let totalVolume = prompt("Enter total Volume");
+let currentVolume = prompt("Enter current volume");
+totalVolume = Number(totalVolume);
+currentVolume = Number(currentVolume);
+if (currentVolume < 0) {
+  alert("impossible");
+} else if (currentVolume === 0) {
+  alert("empty");
+} else if (currentVolume < totalVolume / 2) {
+  alert("less then half");
+} else if (currentVolume === totalVolume / 2) {
+  alert("half");
+} else if (currentVolume < totalVolume) {
+  alert("biggest then half");
+} else if (currentVolume === totalVolume) {
   alert("full");
-} else if (chargeNumber >= 30) {
-  alert("normal");
-} else if (chargeNumber > 0) {
-  alert("urgent charges");
 } else {
-  alert("rip");
+  alert("impossible");
 }
