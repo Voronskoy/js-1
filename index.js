@@ -1,70 +1,35 @@
-// // const dayWeek = prompt("Number of day week:");
-// // if (Number(dayWeek) === 6) {
-// //   alert("wow!");
-// // } else if (Number(dayWeek) === 7) {
-// //   alert("wow!");
-// // } else {
-// //   alert(":(");
-// // }
+// const userInput = prompt("Enter first number:");
+// const userInput2 = prompt("Enter second number:");
 
-// const secretNumber = 42;
-// const userInput = prompt("Enter number:");
-// if (Number(userInput) === secretNumber) {
-//   alert("WOW!!!");
-// } else if (Number(userInput) < secretNumber) {
-//   alert(" Your number less(");
+// const input = Number(userInput);
+// const input2 = Number(userInput2);
+
+// if (input > 0 && input2 > 0) {
+//   alert("like");
+// } else if (input < 0 && input2 < 0) {
+//   alert("dislike");
 // } else {
-//   alert("Your number hight");
+//   alert('no like no dislike');
 // }
 
-// const nameUser1 = prompt("Enter your name:");
-// const nameUser2 = prompt("Enter your name:");
-// if (nameUser1 === nameUser2) {
-//   alert("Hi namesake");
+
+const summa = prompt('Enter summa');
+const minSumma = 1000;
+
+// (condition) ? true_value : false_value
+const delivery = (Number(summa) >= minSumma) ? 0 : 50;
+
+// Альтернатива з if:
+// if (Number(summa) > minSumma) {
+//     delivery = 0;
 // } else {
-//   alert("hi");
+//     delivery = 50;
 // }
 
-// const userSize = prompt("Enter your size:", 36);
-// const size = Number(userSize);
-// if (size === 36) {
-//   alert("Your size S");
-// } else if (size === 38) {
-//   alert("Your size M");
-// } else if (size === 40) {
-//   alert("Your size L");
-// } else {
-//   alert(":(");
-// }
+alert('До сплати = ' + (Number(summa) + delivery));
 
-// let userAge1 = prompt("Your age?");
-// let userAge2 = prompt("Your age?");
-// userAge1 = Number(userAge1);
-// userAge2 = Number(userAge2);
-// if (userAge1 === userAge2) {
-//   alert("We peers");
-// } else if (userAge1 < userAge2) {
-//   alert("oldest second user");
-// } else {
-//   alert("oldest first user");
-// }
+const number = prompt('Enter number');
+// even       odd
+let wordEvenOdd = (Number(number)%2 === 0) ? 'even' : 'odd';
 
-let totalVolume = prompt("Enter total Volume");
-let currentVolume = prompt("Enter current volume");
-totalVolume = Number(totalVolume);
-currentVolume = Number(currentVolume);
-if (currentVolume < 0) {
-  alert("impossible");
-} else if (currentVolume === 0) {
-  alert("empty");
-} else if (currentVolume < totalVolume / 2) {
-  alert("less then half");
-} else if (currentVolume === totalVolume / 2) {
-  alert("half");
-} else if (currentVolume < totalVolume) {
-  alert("biggest then half");
-} else if (currentVolume === totalVolume) {
-  alert("full");
-} else {
-  alert("impossible");
-}
+alert(number + ' - ' + wordEvenOdd);
