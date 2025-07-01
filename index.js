@@ -1,27 +1,48 @@
-// const priceTicket = 100;
+// const MIN_NUMBER = 10;
+// const MAX_NUMBER = 100;
+// const userInput = prompt("Enter number:");
+// if (Number(userInput) >= MIN_NUMBER && Number(userInput) <= MAX_NUMBER  ) {
+//   alert(":)");
+// } else {
+//   alert(":(");
+// }
+// if (!(Number(userInput) >= MIN_NUMBER && Number(userInput) <= MAX_NUMBER  )) {
+//   alert(":(");
+// } else {
+//   alert(":)");
+// }
+// if (Number(userInput) < MIN_NUMBER || Number(userInput) > MAX_NUMBER  ) {
+//   alert(":(");
+// } else {
+//   alert(":)");
+// }
 
-// const userAgeInput = prompt('Enter your age');
-// const userAge = Number(userAgeInput);
+// const ROLE_ADMIN = "admin";
+// const PWD_ADMIN = "123";
+// const userInputName = prompt("enter username:");
+// const userInputPwd = prompt("enter password:");
+// if (userInputName === ROLE_ADMIN && userInputPwd === PWD_ADMIN) {
+//   alert("Hi admin");
+// } else {
+//   alert("Hi user");
+// }
+// if (userInputName !== ROLE_ADMIN || userInputPwd !== PWD_ADMIN) {
+//   alert("Hi user");
+// } else {
+//   alert("Hi admin");
+// }
 
-// const sale = (userAge < 18 || userAge > 65) ? 10 : 0;
-
-// const summaCheck = priceTicket - (priceTicket * sale / 100);
-// alert(summaCheck);
-
-
-// Запитайте у користувача число
-// За допомогою тернарного оператора обчисліть модуль цього числа
-
-// const userInput = prompt('Enter number');
-// const number = Number(userInput);
-// const module = number >= 0 ? number : -number;
-// alert(module);
-
-
-
-const userInput1 = prompt('Enter side 1');
-const userInput2 = prompt('Enter side 2');
-
-const titleFigure = userInput1 === userInput2 ? 'квадрат' : 'прямокутник';
-
-alert(titleFigure);
+const userInput1 = prompt("enter username:");
+const userInput2 = prompt("enter username:");
+if (userInput1 === userInput2) {
+  alert(":)");
+} else {
+  alert(":(");
+}
+if (userInput1 !== userInput2) {
+  alert(":(");
+} else {
+  alert(":)");
+}
+const result1 = userInput1 === userInput2 ? ";)" : ":(";
+alert(result1);
