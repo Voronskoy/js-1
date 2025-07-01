@@ -1,35 +1,27 @@
-// const userInput = prompt("Enter first number:");
-// const userInput2 = prompt("Enter second number:");
+// const priceTicket = 100;
 
-// const input = Number(userInput);
-// const input2 = Number(userInput2);
+// const userAgeInput = prompt('Enter your age');
+// const userAge = Number(userAgeInput);
 
-// if (input > 0 && input2 > 0) {
-//   alert("like");
-// } else if (input < 0 && input2 < 0) {
-//   alert("dislike");
-// } else {
-//   alert('no like no dislike');
-// }
+// const sale = (userAge < 18 || userAge > 65) ? 10 : 0;
+
+// const summaCheck = priceTicket - (priceTicket * sale / 100);
+// alert(summaCheck);
 
 
-const summa = prompt('Enter summa');
-const minSumma = 1000;
+// Запитайте у користувача число
+// За допомогою тернарного оператора обчисліть модуль цього числа
 
-// (condition) ? true_value : false_value
-const delivery = (Number(summa) >= minSumma) ? 0 : 50;
+// const userInput = prompt('Enter number');
+// const number = Number(userInput);
+// const module = number >= 0 ? number : -number;
+// alert(module);
 
-// Альтернатива з if:
-// if (Number(summa) > minSumma) {
-//     delivery = 0;
-// } else {
-//     delivery = 50;
-// }
 
-alert('До сплати = ' + (Number(summa) + delivery));
 
-const number = prompt('Enter number');
-// even       odd
-let wordEvenOdd = (Number(number)%2 === 0) ? 'even' : 'odd';
+const userInput1 = prompt('Enter side 1');
+const userInput2 = prompt('Enter side 2');
 
-alert(number + ' - ' + wordEvenOdd);
+const titleFigure = userInput1 === userInput2 ? 'квадрат' : 'прямокутник';
+
+alert(titleFigure);
