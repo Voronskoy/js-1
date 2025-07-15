@@ -1,61 +1,43 @@
-// let amountPlate = 0;
-// const totalAmountPlate = 5;
+// користувач вводить початкове значеня - число
+// потім він вводить знаки або + або -
+// ми залежно від цих знаків робимо інкремент або дікремент
+// це все продовжуються до того доки користувач не натисне відміну
 
-// // while (amountPlate > 0) {
-// //     console.log('washing plate', amountPlate);
-// //     amountPlate--; // decrement
-// // }
-
-// while (amountPlate < totalAmountPlate) {
-//     amountPlate++;
-//     console.log('washing plate', amountPlate);
-// }
-
-
+// const userInput = prompt("Enter number:");
+// let userNumber = Number(userInput);
 // while (true) {
-//     const userInput = prompt('enter number 77');
-//     if (userInput === '77') {
-//         alert('thanks');
-//         break;
-//     }
-// }
+//   const userInput2 = prompt("Enter +/-:");
 
-// запитувати в користувача ввести число кратне 7 до тих пір, доки він не введе правильно
-// число % 7 === 0 -> break
-
-// while (true) {
-//   const userInput = prompt('enter number multiply 7');
-//   const userNumber = Number(userInput);
-//   if (userNumber % 7 === 0 && userInput !== '' && userInput !== null) {
-//     alert('thanks');
+//   if (userInput2 === null) {
 //     break;
+//   } else if (userInput2 === "+") {
+//     userNumber++;
+//   } else if (userInput2 === "-") {
+//     userNumber--;
+//   } else {
+//     alert("error");
 //   }
 // }
+// alert(userNumber);
 
-
-// while (true) {
-//   const userInput = prompt('Enter something');
-
-//   if (userInput !== '' && userInput !== null) {
-//     alert('thanks');
-//     break;
-//   }
+// for (let i = 3; i <= 9; i++) {
+//   console.log(i, "->", i * i);
 // }
 
-const secretNumber = 4;
-
-while (true) {
-  const userInput = prompt('Enter number');
-  const userNumber = Number(userInput);
-
-  if (userInput === null || userInput.trim() === '' || Number.isNaN(userNumber)) {
-    alert('Error! Enter a valid number');
-  } else if (userNumber === secretNumber) {
-    alert('You win!');
-    break;
-  } else if (userNumber > secretNumber) {
-    alert('Secret number is less');
-  } else {
-    alert('Secret number is bigger');
+// for (let i = 1; i <= 10; i++) {
+//   if (i % 4 === 0) {
+//     console.log("***");
+//   } else if (i % 6 === 0) {
+//     console.log("$$$");
+//   } else {
+//     console.log(i);
+//   }
+// }
+let count = 0;
+while (count < 3) {
+  const userInput = prompt("enter number:");
+  if (Number(userInput) % 7 === 0) {
+    count++;
+    console.log(count, userInput);
   }
 }
