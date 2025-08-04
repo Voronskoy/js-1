@@ -1,66 +1,49 @@
-function convertKmInMl(km) {
-  return km * 1000;
+// №1
+function isCentenaryYear(year = 2024) {
+  return year % 100 === 0;
 }
-const km = 5;
-// console.log(convertKmInMl(km));
 
-function isFreez(temp) {
-  return temp < 0;
+// console.log(isCentenaryYear(3900));
+
+// №2
+const ZERO_FAHRENHEIT = 32;
+const KOEF_CELSIUS_FAHRENHEIT = 9 / 5;
+const DAY_WEEK = 7;
+
+function convertCelsiusFahrenheit(celsius) {
+  return celsius * KOEF_CELSIUS_FAHRENHEIT + ZERO_FAHRENHEIT;
 }
-// console.log(isFreez(0));
 
-function isEqual(a, b, c) {
-  return a === b && b === c;
+// console.log(convertCelsiusFahrenheit(55));
+
+// №3
+function isMultiple(Number1, Number2) {
+  return Number1 % Number2 === 0;
 }
-// console.log(isEqual(3,2,2));
+// console.log(isMultiple(4, 5));
 
-function getDayNumber(dayNumber) {
-  // if (dayNumber === 6 || dayNumber === 7) {
-  //   return "weekend";
-  // } else {
-  //   return "workDay";
-  // }
-  return dayNumber === 6 || dayNumber === 7 ? "weekend" : "workDay";
+// №4
+function getAreaTringle(basis, height) {
+  return (basis * height) / 2;
 }
-// console.log(getDayNumber(7));
+// console.log(getAreaTringle(7.5, 9));
 
-function getTimeOfDay(hour) {
-  if (hour >= 6 && hour < 12) {
-    return "morning";
-  }
-  if (hour >= 12 && hour < 18) {
-    return "afternoon";
-  }
-  if (hour >= 18 && hour < 22) {
-    return "evening";
-  }
-  if ((hour >= 0 && hour < 6) || (hour >= 22 && hour < 24)) {
-    return "night";
-  }
-  return "wrong data";
+// №5
+function summaGoods(summa, procents = 20) {
+  const pdv = (summa * procents) / 100;
+  return summa + pdv;
 }
-// console.log(getTimeOfDay(2));
+// console.log(summaGoods(10));
 
-function getGradeText(grade) {
-  if (grade >= 1 && grade < 4) {
-    return "bad";
-  }
-  if (grade >= 4 && grade < 7) {
-    return "normal";
-  }
-  if (grade >= 7 && grade < 10) {
-    return "good";
-  }
-  if (grade >= 10 && grade <= 12) {
-    return "amazing";
-  }
-  return "wrong number";
+// №6
+function isEvenDifferenceBetweenNumbers(number1, number2) {
+  return (number1 - number2) % 2 === 0;
 }
-// console.log(getGradeText(15));
+// console.log(isEvenDifferenceBetweenNumbers(10, 10));
 
-function checkSpeedWiFi(speed, baseSpeed = 30) {
-  return speed >= baseSpeed;
+// №7
+const INCH_SM = 2.54;
+function convertInchToSm(inch) {
+  return inch * INCH_SM;
 }
-console.log(checkSpeedWiFi(30, 40));
-console.log(checkSpeedWiFi(30));
-
+console.log(convertInchToSm(10));
