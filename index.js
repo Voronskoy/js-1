@@ -1,39 +1,27 @@
-const phone = {
-  brand: "oppo",
-  model: "r8",
-  price: 230,
-  getDetails() {
-    return `${this.brand} ${this.model}
-    costs $${This.price} color:$${This.color}`;
-  },
-};
+function User(name, age) {
+  this.name = name;
+  this.age = age;
+  this.getInfo = function () {
+    return `${this.name} is ${this.age} years old`;
+  };
+}
 
-console.log(phone);
-console.log(phone.getDetails());
+const user1 = new User("Fred", 12);
+console.log(user1.getInfo());
+const user2 = new User("Anna", 15);
+console.log(user2.getInfo());
 
-phone.color = 'red';
-console.log(phone.getDetails());
+function Phone(brand, model, price) {
+  this.brand = 'Google';
+  this.price = 19000;
+  this.model ='pixel 6 pro';
+  this.getDeteils = function () {
+    return `${this.brand}, ${this.model}, ${this.price}`;
+  };
+}
 
+const phone1 = new Phone();
+console.log(phone1.getDeteils());
 
-
-
-const country = {
-  name: 'Ukraine',
-  capital: 'Kyiv',
-  area: 608628,
-  population:40000000,
-  getDestination(){
-    return this.population / this.area;
-  },
-  getDescribe(){
-    return `the ${this.capital} is the capital of ${this.name}`;
-  },
-};
-console.log(country.getDescribe());
-console.log(country.getDestination());
-
-
-
-
-
-
+const phone2 = new Phone("Sony")
+console.log(phone2.getDeteils());
