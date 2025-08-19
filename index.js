@@ -1,7 +1,7 @@
 function User(name, age, isMale) {
   this.name = name;
   this.age = age;
-  this.isMale = isMalele;
+  this.isMale = isMale;
 }
 function UserPrototype() {
   this.getName = function () {
@@ -15,7 +15,7 @@ function UserPrototype() {
   };
 }
 
-// User.prototype = new UserPrototype();
+User.prototype = new UserPrototype();
 // const user1 = new User('Alex', 20, true);
 // console.log(user1);
 // console.log(user1.getInfo());
@@ -29,14 +29,16 @@ function UserPrototype() {
 
 function Circle(radius) {
   this.radius = radius;
-  this.getArea = function () {
-    return Math.PI * radius * radius;
+}
+function CirclePrototype() {
+    this.getArea = function () {
+    return Math.PI * this.radius * this.radius;
   };
   this.getPerimetr = function () {
-    return 2 * Math.PI * radius;
+    return 2 * Math.PI * this.radius;
   };
   this.getDiametr = function () {
-    return 2 * radius;
+    return 2 * this.radius;
   };
 }
 Circle.prototype = new CirclePrototype();
