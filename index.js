@@ -1,76 +1,45 @@
-function Game(name, genre, hoursPlayed) {
-  this.name = name;
-  this.genre = genre;
-  this.hoursPlayed = hoursPlayed;
-}
-function GamePrototype() {
-  this.getProgress = function () {
-    return `You have played ${this.name} for ${this.hoursPlayed} hours.`;
-  };
-}
-Game.prototype = new GamePrototype();
-// const game1 = new Game("Portal", "sandbox", 42);
-// console.log(game1.getProgress());
-// const game2 = new Game("Roblox", 'sanbox', 83)
-// console.log(game2.getProgress());
-// console.log(game1.getProgress === game2.getProgress);
+// Створюємо масив імен друзів
+const names = [];
+console.log(`Довжина масиву: ${names.length}`);
 
-function Laptop(brand, ram, storage) {
-  this.brand = brand;
-  this.ram = ram;
-  this.storage = storage;
-}
-function LaptopPrototype() {
-  this.getTotalMemory = function () {
-    return this.ram + this.storage;
-  };
-}
-// Laptop.prototype = new LaptopPrototype();
-// const laptop1 = new Laptop("asus", 8, 256);
-// console.log(laptop1.getTotalMemory());
-// const laptop2 = new Laptop('gigabyte', 32, 1024)
-// console.log(laptop2.getTotalMemory());
+// Додаємо елементи в кінець масиву
+names.push('Anna', 'Olga');
+console.log('Після додавання в кінець:', names);
 
-function BikeTrip(distance, avergeSpeed) {
-  this.distance = distance;
-  this.avergeSpeed = avergeSpeed;
-}
-function BikeTripPrototype() {
-  this.getTripTime = function () {
-    return this.distance / this.avergeSpeed;
-  };
-}
-// BikeTrip.prototype = new BikeTripPrototype();
-// const bikeTrip1 = new BikeTrip(100, 30);
-// console.log(bikeTrip1.getTripTime());
-// const bikeTrip2 = new BikeTrip(120, 30);
-// console.log(bikeTrip2.getTripTime());
+// Додаємо елементи на початок масиву
+names.unshift('Max', 'Fred');
+console.log('Після додавання на початок:', names);
 
-function PlayList(totalSongs, listenSongs) {
-  this.totalSongs = totalSongs;
-  this.listenSongs = listenSongs;
-}
-function PlayListPrototype() {
-  this.getListenSongsPercent = function () {
-    return (this.listenSongs * 100) / this.totalSongs;
-  };
-  this.getRestSongsPercent = function () {
-    return 100 - this.getListenSongsPercent();
-  };
-}
-// PlayList.prototype = new PlayListPrototype();
-// const playList1 = new PlayList(540, 539);
-// console.log(playList1.getListenSongsPercent());
-// console.log(playList1.getRestSongsPercent());
+// Видаляємо елемент з кінця масиву
+const lastName = names.pop();
+console.log(`Видалений з кінця: ${lastName}`);
+console.log('Масив після видалення з кінця:', names);
 
-const device = { isBattery: true };
-const phone = { brand: "apple" };
-phone.__proto__ = device;
-// console.log(phone.isBattery);
-// console.log(phone.brand);
+// Повертаємо видалений елемент на початок
+names.unshift(lastName);
+console.log('Після повернення на початок:', names);
 
-const grandPa = { isHouse: true, lastName: "Jex", sayHi(){return 'hi!'} };
-const father = { __proto__: grandPa, isCar: true };
-const son = { __proto__: father };
-console.log(father.isHouse, father.lastName);
-console.log(son.isHouse, son.lastName, son.isCar, son.sayHi());
+// Видаляємо елемент з початку масиву
+const firstName = names.shift();
+console.log(`Видалений з початку: ${firstName}`);
+console.log('Масив після видалення з початку:', names);
+
+
+
+
+
+
+const fruits = [];
+
+console.log(fruits.length);
+
+fruits.push('яблуко', 'мандарин', 'кокос');
+fruits.unshift('манго', 'банан');
+
+const orange = fruits.pop();
+const banana = fruits.pop();
+
+const addFruit1 = fruits.unshift(orange);
+const addFruit2 = fruits.unshift(banana);
+
+console.log(fruits);
