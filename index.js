@@ -1,26 +1,31 @@
-const site = {
-  title: 'my site',
-  headers: ['qwe1', 'qwe2', 'qwe3'],
+// forEach - перебирає елементи масива і з кожним виконує колбек - НЕ ЗМІНЮЄ масив!!
+const numbers = [1, 2, 3];
+console.log(numbers);
 
-  showHeaders() {
-    this.headers.forEach(elem => {
-      console.log(elem);
-    });
-  },
+// numbers.forEach((number, index, array)=>{
+//     console.log(number, index, array);
+// })
 
-  showHeadersAndTitle() {
-    this.headers.forEach(elem => {
-      console.log(elem, this.title);
-    });
-  },
+// numbers.forEach((number)=>{
+//     console.log(number, number ** 2);
+// })
 
-  showHeadersAndTitle2() {
-    this.headers.forEach(elem => {
-      console.log(elem, this.title);
-    });
-  }
-};
+// map - перебирає елементи масива і для кожного виконує колбек - а саме - повертає нове значення - НЕ ЗМІНЮЄ джерельний масив!! а ПОВЕРТАЄ новий масив з новими значеннями
+const newArrayNumbers = numbers.map((elem) => elem * elem);
+console.log(newArrayNumbers);
+console.log(numbers);
 
-site.showHeaders();
-site.showHeadersAndTitle();
-site.showHeadersAndTitle2();
+// filter - перебирає елементи масива і для кожного виконує колбек - а саме перевіряє значення в умовній конструкції і якщо конструкція правда, то повертає значення в новому масиві. НЕ ЗМІНЮЄ джерельний масив!!
+const evenNumbers = numbers.filter((item) => item % 2 === 0);
+console.log(evenNumbers);
+console.log(numbers);
+
+// reduce - перебирає елементи масива і додає кожне значення до акумулятора(в одну торбочку) НЕ ЗМІНЮЄ джерельний масив!! а повертає одне значення яке було накопичене в акумуляторі
+const summa = numbers.reduce((accumulator, number) => accumulator + number);
+console.log(summa);
+console.log(numbers);
+
+const summaOddNumbers = numbers
+    .filter((elem) => elem % 2 == 1)
+    .reduce((summa, elem) => summa + elem);
+console.log(summaOddNumbers);
