@@ -1,31 +1,26 @@
-// forEach - перебирає елементи масива і з кожним виконує колбек - НЕ ЗМІНЮЄ масив!!
-const numbers = [1, 2, 3];
-console.log(numbers);
+//string
 
-// numbers.forEach((number, index, array)=>{
-//     console.log(number, index, array);
-// })
+const userName = '        bRad       '; // Brad
 
-// numbers.forEach((number)=>{
-//     console.log(number, number ** 2);
-// })
+const userNameTrim = userName.trim().toLowerCase();
+console.log(userNameTrim)
+const firstLetter = userNameTrim.charAt(0).toUpperCase();
+console.log(firstLetter)
+const lastLetters = userNameTrim.slice(1)
+console.log(lastLetters)
 
-// map - перебирає елементи масива і для кожного виконує колбек - а саме - повертає нове значення - НЕ ЗМІНЮЄ джерельний масив!! а ПОВЕРТАЄ новий масив з новими значеннями
-const newArrayNumbers = numbers.map((elem) => elem * elem);
-console.log(newArrayNumbers);
-console.log(numbers);
+const finallyUserName = firstLetter + lastLetters;
+console.log(finallyUserName)
 
-// filter - перебирає елементи масива і для кожного виконує колбек - а саме перевіряє значення в умовній конструкції і якщо конструкція правда, то повертає значення в новому масиві. НЕ ЗМІНЮЄ джерельний масив!!
-const evenNumbers = numbers.filter((item) => item % 2 === 0);
-console.log(evenNumbers);
-console.log(numbers);
+//const userNameVariable = ' 4qwerty '
+//прибрати пробіли trim
+//отримати код першого символа charCodeAt(0)
+//порівняти код з діапазоном 48-57 включно
 
-// reduce - перебирає елементи масива і додає кожне значення до акумулятора(в одну торбочку) НЕ ЗМІНЮЄ джерельний масив!! а повертає одне значення яке було накопичене в акумуляторі
-const summa = numbers.reduce((accumulator, number) => accumulator + number);
-console.log(summa);
-console.log(numbers);
-
-const summaOddNumbers = numbers
-    .filter((elem) => elem % 2 == 1)
-    .reduce((summa, elem) => summa + elem);
-console.log(summaOddNumbers);
+while (true) {
+    const userNameVariable = prompt("ім'я для змінної");
+    const codeFirstSymbol = userNameVariable.trim().charCodeAt(0);
+    if (codeFirstSymbol < 48 || codeFirstSymbol > 57) {
+        break;
+    }
+}
