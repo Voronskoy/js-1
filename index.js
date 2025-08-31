@@ -1,18 +1,26 @@
-//function declaration
+const site = {
+  title: 'my site',
+  headers: ['qwe1', 'qwe2', 'qwe3'],
 
-function logWorld(word) {
-  console.log(word);
-}
-logWorld1("test");
+  showHeaders() {
+    this.headers.forEach(elem => {
+      console.log(elem);
+    });
+  },
 
-// function expression
-const logWord2 = function (word) {
-  console.log(word);
+  showHeadersAndTitle() {
+    this.headers.forEach(elem => {
+      console.log(elem, this.title);
+    });
+  },
+
+  showHeadersAndTitle2() {
+    this.headers.forEach(elem => {
+      console.log(elem, this.title);
+    });
+  }
 };
-logWord2("new text");
 
-// arrow function
-const logWord3 = (word) => {
-  console.log(word);
-};
-logWord3("qwerty");
+site.showHeaders();
+site.showHeadersAndTitle();
+site.showHeadersAndTitle2();
