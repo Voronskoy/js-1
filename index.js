@@ -1,26 +1,59 @@
-//string
+const numbers = [2, 7, 10, 15, 25, 42];
+let count = 0;
+// numbers.forEach((number) => {
+//   if (number < 20) {
+//     count++
+//   };
+// });
+// console.log(count);
 
-const userName = '        bRad       '; // Brad
+// numbers.forEach((number) => {
+//   if (number % 2 === 0) {
+//     count++;
+//   }
+// });
+// console.log(count);
 
-const userNameTrim = userName.trim().toLowerCase();
-console.log(userNameTrim)
-const firstLetter = userNameTrim.charAt(0).toUpperCase();
-console.log(firstLetter)
-const lastLetters = userNameTrim.slice(1)
-console.log(lastLetters)
+// numbers.forEach((number) => {
+//   if (number % 2 === 1) {
+//     console.log(number);
+//     ;
+//   }
+// });
 
-const finallyUserName = firstLetter + lastLetters;
-console.log(finallyUserName)
+// numbers.forEach((number) => {
+//   if (number % 3 === 0) {
+//     console.log(number);
+//   }
+// });
 
-//const userNameVariable = ' 4qwerty '
-//прибрати пробіли trim
-//отримати код першого символа charCodeAt(0)
-//порівняти код з діапазоном 48-57 включно
+// let newNumbers = numbers.map((number) => number + 3);
+// console.log(newNumbers);
 
-while (true) {
-    const userNameVariable = prompt("ім'я для змінної");
-    const codeFirstSymbol = userNameVariable.trim().charCodeAt(0);
-    if (codeFirstSymbol < 48 || codeFirstSymbol > 57) {
-        break;
-    }
-}
+// let newNumbers = numbers.map((number) => {
+//   if (number % 2 === 0) {
+//     return number / 2;
+//   }
+//   return number - 1;
+// });
+
+// const newNumbers = numbers.map((number) =>
+//   number % 2 === 0 ? number / 2 : number - 1
+// );
+
+// console.log(numbers);
+// console.log(newNumbers);
+
+const summa = numbers.reduce((accum, number) => accum + number, 0);
+console.log(summa);
+const average = summa / numbers.length;
+console.log(average);
+
+const numbersLessAverage = numbers.filter((number) => number < average);
+console.log(numbersLessAverage);
+
+
+const newNumbers = numbers.filter((number) => number % 8 === 0);
+console.log(newNumbers);
+console.log(numbers);
+
