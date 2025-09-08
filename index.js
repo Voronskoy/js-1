@@ -1,21 +1,35 @@
-//reverse, sort
+// const word = prompt("Input word:");
+// console.dir(word);
+// console.log(word);
 
-const numbers = [5, 172, 1, 10];
-const numbersSorted = numbers.toSorted((a, b) => a - b);
-const numbersSortedReverse = numbersSorted.toReversed();
+// const wordLenght = word.length;
+// const letter = "th";
+// console.log(wordLenght);
+// if (word.includes(letter)) {
+//   console.log(` ${word} has ${letter}`);
+// } else {
+//   console.log(` ${word} hasn't ${letter}`);
+// }
 
-console.log(numbers);
-console.log(numbersSorted);
-console.log(numbersSortedReverse);
+// const wordCapitalize = word[0].toUpperCase() + word.slice(1).toLowerCase();
+// console.log(wordCapitalize);
 
-// метод sort ЗМІНЮЄ!!! поточний масив
-// console.log(numbers.sort());
-// console.log(numbers.sort((a, b) => a - b)); //0 1 -1
-// console.log(numbers);
+const sentence = "I have white car";
+// const countWords = sentence.split(" ").length;
 
-// console.log(numbers.sort((a, b) => b - a));
-// console.log(numbers);
+// console.log(countWords);
+// const firstletter = sentence
+//   .split(" ")
+//   .map((word) => word[0].toUpperCase())
+//   .join("");
+// console.log(firstletter);
 
-// метод reverse ЗМІНЮЄ!!! поточний масив
-// console.log(numbers.reverse());
-// console.log(numbers);
+// const length = 5;
+// let count = 0
+// const words = sentence.split(" ").filter((word) => word.length > length).length;
+// console.log(words);
+
+const word = "elements";
+const letter = "e";
+const countLetters = word.split("").filter((ltt) => ltt === letter).length;
+console.log(countLetters);
