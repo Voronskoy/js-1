@@ -1,35 +1,63 @@
-// const word = prompt("Input word:");
-// console.dir(word);
-// console.log(word);
+console.log(movies);
+// написати функцію яка повертає всі фільми певного жанру
+function getMoviesByGenre(genre, movies) {
+  return movies.filter((movie) => movie.genre === genre);
+}
+const moviesByGenre = getMoviesByGenre("Драма", movies);
+console.log(moviesByGenre);
 
-// const wordLenght = word.length;
-// const letter = "th";
-// console.log(wordLenght);
-// if (word.includes(letter)) {
-//   console.log(` ${word} has ${letter}`);
-// } else {
-//   console.log(` ${word} hasn't ${letter}`);
-// }
+function getMoviesByDirector(movies, director) {
+  return movies.filter((movie) => movie.director === director);
+}
+const moviesByDirector = getMoviesByDirector(movies, "Крістофер Нолан");
+console.log(moviesByDirector);
 
-// const wordCapitalize = word[0].toUpperCase() + word.slice(1).toLowerCase();
-// console.log(wordCapitalize);
+// написати функцію яка повертає всі фільми які були випущені з 1990 по 2000 рік
+function getMoviesByYears(movies, fromYear = 1990, toYear = 2000) {
+  return movies.filter(
+    (movie) => movie.year >= fromYear && movie.year < toYear
+  );
+}
 
-const sentence = "I have white car";
-// const countWords = sentence.split(" ").length;
+const moviesByYears = getMoviesByYears(movies);
+console.log(moviesByYears);
 
-// console.log(countWords);
-// const firstletter = sentence
-//   .split(" ")
-//   .map((word) => word[0].toUpperCase())
-//   .join("");
-// console.log(firstletter);
+function getTitleByDirector(movies, director) {
+  return movies
+    .filter((movie) => movie.director === director)
+    .map((movie) => movie.title);
+}
+const titleByDirector = getTitleByDirector(movies, "Девід Фінчер");
+console.log(titleByDirector);
 
-// const length = 5;
-// let count = 0
-// const words = sentence.split(" ").filter((word) => word.length > length).length;
-// console.log(words);
+function getDirectorByYear(movies, year = 1999) {
+  return movies
+    .filter((movie) => movie.year === year)
+    .map((movie) => movie.director);
+}
+const directorByYear = getDirectorByYear(movies);
+console.log(directorByYear);
 
-const word = "elements";
-const letter = "e";
-const countLetters = word.split("").filter((ltt) => ltt === letter).length;
-console.log(countLetters);
+function getMovieByTitlePart(movies, word) {
+  return movies.filter((movie) => movie.title.toLowerCase().includes(word));
+}
+const movieByTitlePart = getMovieByTitlePart(movies, "ар");
+console.log(movieByTitlePart);
+
+function sortMoviesByDuration(movies) {
+  return movies.toSorted((movie1, movie2) => movie1.duration - movie2.duration);
+}
+const moviesByDuration = sortMoviesByDuration(movies);
+console.log(moviesByDuration);
+
+function getOldestMovie(movies) {
+  return movies.toSorted((movie1, movie2) => movie1.year - movie2.year)[0]
+}
+const oldestMovie = getOldestMovie(movies);
+console.log(oldestMovie);
+
+function getlatestMovie(movies) {
+  return movies.toSorted((movie1, movie2) => movie2.year - movie1.year)[0]
+}
+const latestMovie = getlatestMovie(movies);
+console.log(latestMovie);
