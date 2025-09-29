@@ -1,25 +1,47 @@
-class User {
-  #login;
-  constructor(login) {
-    this.login = login;
+// const numbers = [1, 2, 3, 4, 5, 1, 2];
+// const uniqNumbers = new Set(numbers);
+// console.log(uniqNumbers);
+// console.log(numbers);
+// console.log(uniqNumbers.size);
+// const numbers2 = [1, 1, 2, 7, 5, 6];
+// const merged = [...numbers,...numbers2]
+// const uniqNumbers2 = new Set(merged);
+// console.log(uniqNumbers2);
+// console.log(merged);
+
+// const userLevel = new Map([
+//   ["Alex", "a1"],
+//   ["Bob", "a2"],
+// ]);
+// console.log(userLevel);
+// console.log(userLevel.get('Alex'));
+// userLevel.set('Vlad', 'a3');
+
+class Message {
+  #text;
+  constructor(text) {
+    this.text = text;
   }
-  set login(value) {
+  set text(value) {
     if (typeof value !== "string") {
-      throw new TypeError("type must be string");
+      throw new TypeError("value must be string");
     }
-    if (value.trim().length < 3 || value.trim().length > 15) {
-      throw new RangeError("length 3. . 15");
+    if (value === "") {
+      throw new RangeError("string not be empty");
     }
-    this.#login = value;
+    this.#text = value;
   }
-  get login() {
-    return this.#login;
+  get text() {
+    return this.#text;
+  }
+  showMessageUpearcase() {
+    return this.text.toUpperCase();
   }
 }
 try {
-  const user = new User(true);
-  console.log(user);
+  const message1 = new Message("");
+  console.log(message1.text);
+  console.log(message1.showMessageUpearcase());
 } catch (error) {
-  console.error(error);
+  console.log(error);
 }
-console.error('code');
