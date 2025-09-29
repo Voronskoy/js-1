@@ -1,63 +1,26 @@
-console.log(movies);
-// написати функцію яка повертає всі фільми певного жанру
-function getMoviesByGenre(genre, movies) {
-  return movies.filter((movie) => movie.genre === genre);
-}
-const moviesByGenre = getMoviesByGenre("Драма", movies);
-console.log(moviesByGenre);
+const set = new Set();
+set.add(7);
+set.add(7);
+set.add("7");
+set.add(3 + 4);
+console.log(set);
 
-function getMoviesByDirector(movies, director) {
-  return movies.filter((movie) => movie.director === director);
-}
-const moviesByDirector = getMoviesByDirector(movies, "Крістофер Нолан");
-console.log(moviesByDirector);
+const numbers = [1, 2, 3, 1, 5, 4, 2, 3, 1, 7];
+const uniqSetNumbers = new Set(numbers);
+const uniqNumbers = [...uniqSetNumbers];
+console.log(uniqNumbers);
 
-// написати функцію яка повертає всі фільми які були випущені з 1990 по 2000 рік
-function getMoviesByYears(movies, fromYear = 1990, toYear = 2000) {
-  return movies.filter(
-    (movie) => movie.year >= fromYear && movie.year < toYear
-  );
-}
+const string = "SyntaxError: Unexpected token const Unexpected token";
+const word = "subscribe";
+console.log(new Set(word));
+console.log(new Set(string.toLowerCase()));
+console.log(new Set(string.split(" ")));
 
-const moviesByYears = getMoviesByYears(movies);
-console.log(moviesByYears);
-
-function getTitleByDirector(movies, director) {
-  return movies
-    .filter((movie) => movie.director === director)
-    .map((movie) => movie.title);
-}
-const titleByDirector = getTitleByDirector(movies, "Девід Фінчер");
-console.log(titleByDirector);
-
-function getDirectorByYear(movies, year = 1999) {
-  return movies
-    .filter((movie) => movie.year === year)
-    .map((movie) => movie.director);
-}
-const directorByYear = getDirectorByYear(movies);
-console.log(directorByYear);
-
-function getMovieByTitlePart(movies, word) {
-  return movies.filter((movie) => movie.title.toLowerCase().includes(word));
-}
-const movieByTitlePart = getMovieByTitlePart(movies, "ар");
-console.log(movieByTitlePart);
-
-function sortMoviesByDuration(movies) {
-  return movies.toSorted((movie1, movie2) => movie1.duration - movie2.duration);
-}
-const moviesByDuration = sortMoviesByDuration(movies);
-console.log(moviesByDuration);
-
-function getOldestMovie(movies) {
-  return movies.toSorted((movie1, movie2) => movie1.year - movie2.year)[0]
-}
-const oldestMovie = getOldestMovie(movies);
-console.log(oldestMovie);
-
-function getlatestMovie(movies) {
-  return movies.toSorted((movie1, movie2) => movie2.year - movie1.year)[0]
-}
-const latestMovie = getlatestMovie(movies);
-console.log(latestMovie);
+const dictionary = new Map();
+dictionary.set("copy", "копіювати");
+dictionary.set("subscribe", "підписатися");
+dictionary.set("send", "відправити");
+dictionary.set("share", "поділитися");
+dictionary.set("add to cart", "додати в корзину");
+dictionary.set("zoom", "збільшити");
+dictionary.set("play", "грати");
